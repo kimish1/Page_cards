@@ -6,10 +6,10 @@ const Header = () =>{
             <p>HEADER</p>
             <div>
                 <ul>
-                    <li>Link1</li>
-                    <li>Link2</li>
-                    <li>Link3</li>
-                    <li>Link4</li>
+                    <li><a href="/">Головна</a></li>
+                    <li><a href="/page-1">Перша сторінка</a></li>
+                    <li><a href="/page-2">Друга сторінка</a></li>
+                    <li><a href="/page-3">Третя сторінка</a></li>
                 </ul>
             </div>
         </div>
