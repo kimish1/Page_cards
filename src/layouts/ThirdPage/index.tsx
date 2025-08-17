@@ -1,70 +1,18 @@
 import Page from '../page'
+import data from "../../Fixtures/third.json";
+import Card from "../../components/Card/Card.tsx";
 
 function Third() {
     return (
         <div>
             <Page>
-                <div className="cards">
-                    <div className="card">
-                        <div className="content">
-                            <div className="title">Personal edition</div>
-                            <div className="price">$39.99</div>
-                            <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                                at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                            </div>
-                        </div>
-                        <button>
-                            Buy now
-                        </button>
-                    </div>
-                    <div className="card">
-                        <div className="content">
-                            <div className="title">Personal edition</div>
-                            <div className="price">$39.99</div>
-                            <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                                at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                            </div>
-                        </div>
-                        <button>
-                            Buy now
-                        </button>
-                    </div>
-                    <div className="card">
-                        <div className="content">
-                            <div className="title">Personal edition</div>
-                            <div className="price">$39.99</div>
-                            <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                                at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                            </div>
-                        </div>
-                        <button>
-                            Buy now
-                        </button>
-                    </div>
-                    <div className="card">
-                        <div className="content">
-                            <div className="title">Personal edition</div>
-                            <div className="price">$39.99</div>
-                            <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                                at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                            </div>
-                        </div>
-                        <button>
-                            Buy now
-                        </button>
-                    </div>
-                    <div className="card">
-                        <div className="content">
-                            <div className="title">Personal edition</div>
-                            <div className="price">$39.99</div>
-                            <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                                at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                            </div>
-                        </div>
-                        <button>
-                            Buy now
-                        </button>
-                    </div>
+                <div className="cards third">
+                    {data.map((object) => (
+                        <Card key={object.id} title={object.title} buttonName={object.buttonName}>
+                            <div className="price">${object.price}</div>
+                            <div className="description">{object.description}</div>
+                        </Card>
+                    ))}
                 </div>
             </Page>
         </div>

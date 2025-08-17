@@ -8,13 +8,13 @@ function First() {
                 <div className="cards">
                     {data.map((object) => (
                         <Card key={object.id} title={object.title} buttonName={object.buttonName}>
-                            <ul>
-                                {object.list.map(item => {
-                                    <li>
-                                        item
-                                    </li>
-                                })}
-                            </ul>
+                            <div className="description">
+                                <ul>
+                                    {object.list.map((item, index) => {
+                                        return <li key={index}>{item}</li>;
+                                    })}
+                                </ul>
+                            </div>
                         </Card>
                     ))}
                 </div>

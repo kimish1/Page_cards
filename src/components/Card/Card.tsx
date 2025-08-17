@@ -5,17 +5,16 @@ type MyCardProps = {
     children: React.ReactNode;
 };
 
+
 const Card = (props:MyCardProps) =>{
     return (
             <div className="card">
                 <div className="content">
                     <div className="title">{props.title}</div>
-                    <div className="description">
-                        {props.children}
-                    </div>
+                    {props.children}
                 </div>
                 <button>
-                    {props.buttonName}
+                {props.buttonName}
                 </button>
             </div>
     )
